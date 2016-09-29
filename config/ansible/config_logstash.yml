@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  become: true
+  connection: local
+  tasks:
+    - name: Configuring Redis Output
+      replace:
+        regexp: "redisoutput"
+        replace: "{{ redis_server }}"
+        dest: "/etc/logstash/conf.d/pre_processor_999_outputs.conf"
