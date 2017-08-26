@@ -18,4 +18,4 @@ RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Expose ports
-EXPOSE 5044 10514 10514/udp
+EXPOSE 2055/udp 5044 10514 10514/udp
